@@ -9,11 +9,11 @@ export default function Hero() {
                         Selamat datang di Desa Turus!
                     </h1>
                     <span className="text-2xl leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odio voluptatum mollitia iure temporibus unde blanditiis culpa magni quasi amet expedita.</span>
-                    <div className="flex gap-5 mt-10">
+                    {/* <div className="flex gap-5 mt-10">
                         <div className="bg-zinc-300 h-36 w-36 rounded-xl"></div>
                         <div className="bg-zinc-300 h-36 w-36 rounded-xl"></div>
                         <div className="bg-zinc-300 h-36 w-36 rounded-xl"></div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="w-full md:w-1/3 flex flex-col gap-5 md:ml-20">
                         <Image 

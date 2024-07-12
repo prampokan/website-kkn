@@ -12,7 +12,7 @@ import { collection, getDocs, query, addDoc, orderBy } from "firebase/firestore"
 export default function Posts() {
     const googleAuth = new GoogleAuthProvider()
     const [user, loading, error] = useAuthState(auth)
-    const [file, setFile] = useState(null)
+    const [file, setFile] = useState<File | null>(null);
     const [uploading, setUploading] = useState(false)
     const [loadingPosts, setLoadingPosts] = useState(false)
     const [loadingLogOut, setLoadingLogOut] = useState(false)
@@ -21,7 +21,7 @@ export default function Posts() {
     const [isOpen, setIsOpen] = useState(false)
     const [modalOpen, setModalOpen] = useState(false)
     const [preview, setPreview] = useState("")
-    const divRef = useRef(null);
+    const divRef = useRef<HTMLDivElement>(null);
 
     console.log(user);
 
@@ -96,7 +96,7 @@ export default function Posts() {
     const formatedTimeStamp = (timestamp: any) => {
         const now = new Date();
         const postDate = new Date(timestamp * 1000);
-        const diffInSeconds = Math.floor((now - postDate) / 1000);
+        const diffInSeconds = Math.floor((now.getTime() - postDate.getTime()) / 1000);
     
         const units = [
             { name: 'tahun', value: 60 * 60 * 24 * 365 },
@@ -154,7 +154,7 @@ export default function Posts() {
                                         <div className="flex gap-4">
                                             <div className="bg-zinc-300 h-12 w-12 rounded-full overflow-hidden">
                                                 <Image 
-                                                    src={user.photoURL}
+                                                    src={user?.photoURL || "/images/hero.webp"}
                                                     alt="image"
                                                     width={500}
                                                     height={500}    
