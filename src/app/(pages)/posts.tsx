@@ -137,12 +137,12 @@ export default function Posts() {
         <div className="flex justify-center py-20 mt-20 px-5 xl:px-0">
             <div className="w-[70rem]">
                 <div>
-                    <h1 className="font-bold text-5xl tracking-tight">Unggah Keseruanmu di Turus!</h1>
+                    <h1 className="font-bold text-3xl sm:text-5xl tracking-tight">Unggah Keseruanmu di Turus!</h1>
                 </div>
                 <div className="mt-10">
                     {user ? 
                         <div className="flex gap-3 items-center">
-                            <button onClick={() => setModalOpen(true)} className="border px-8 h-12 rounded-lg flex items-center justify-center gap-2 text-zinc-500 hover:text-zinc-700 bg-zinc-50 transition-all font-semibold">
+                            <button onClick={() => setModalOpen(true)} className="text-sm sm:text-base border px-8 h-12 rounded-lg flex items-center justify-center gap-2 text-zinc-500 hover:text-zinc-700 bg-zinc-50 transition-all font-semibold">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
                                 </svg>
