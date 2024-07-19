@@ -5,34 +5,34 @@ export default function Hero() {
         <div className="flex justify-center items-center py-32 px-5 xl:px-0">
             <div className="w-[70rem] flex flex-col md:flex-row gap-8 md:gap-0 items-center">
                 <div className="w-full md:w-2/3">
-                    <h1 className="text-6xl lg:text-8xl font-bold tracking-tighter mb-10">
+                    <h1 className="text-6xl text-zinc-700 lg:text-8xl font-bold tracking-tighter mb-10">
                         Selamat datang di Desa Turus!
                     </h1>
-                    <span className="text-2xl leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odio voluptatum mollitia iure temporibus unde blanditiis culpa magni quasi amet expedita.</span>
+                    <span className="text-2xl leading-relaxed text-zinc-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odio voluptatum mollitia iure temporibus unde blanditiis culpa magni quasi amet expedita.</span>
                     <div className="flex gap-5 mt-10">
                         <div className="bg-zinc-50 border h-24 w-24 sm:h-36 sm:w-36 rounded-xl p-2 flex flex-col justify-center items-center text-center">
-                            <div className="w-10">
+                            <div className="w-7 sm:w-10">
                                 <Image 
-                                src="/images/logo-klaten.png"
-                                width={150}
-                                height={150}
-                                alt="Picture of the author"
-                                className="object-cover"
+                                    src="/images/logo-klaten.png"
+                                    width={150}
+                                    height={150}
+                                    alt="Picture of the author"
+                                    className="object-cover"
                                 />
                             </div>
-                            <span className="text-center font-mono text-zinc-600 mt-2">Kabupaten Klaten</span>
+                            <span className="text-center text-sm sm:text-base font-mono text-zinc-600 sm:mt-2">Kabupaten Klaten</span>
                         </div>
                         <div className="bg-zinc-50 border h-24 w-24 sm:h-36 sm:w-36 rounded-xl flex flex-col justify-center items-center">
-                            <span className="text-5xl px-1 py-2 bg-red-100 rounded-2xl">
+                            <span className="text-xl sm:text-4xl px-1 py-2 bg-red-100 rounded-2xl">
                                 👨‍👩‍👧‍👦
                             </span>
-                            <span className="text-center font-mono text-zinc-600 mt-2">250+ Kartu Keluarga</span>
+                            <span className="text-center text-sm sm:text-base font-mono text-zinc-600 sm:mt-2">600+ Kartu Keluarga</span>
                         </div>
-                        <div className="bg-zinc-50 border h-24 w-24 sm:h-36 sm:w-36 rounded-xl flex flex-col justify-center items-center">
-                            <span className="text-4xl px-1 py-2 bg-red-100 rounded-2xl">
+                        <div className="bg-zinc-50 border h-24 w-24 sm:h-36 sm:w-36 rounded-xl flex flex-col justify-center items-center px-0 sm:px-5">
+                            <span className="text-xl sm:text-4xl px-1 py-2 bg-red-100 rounded-2xl">
                                 🧪
                             </span>
-                            <span className="text-center font-mono text-zinc-600 mt-2">30°c Suhu Rata-rata</span>
+                            <span className="text-center text-sm sm:text-base font-mono text-zinc-600 sm:mt-2">30°c Suhu Rata-rata</span>
                         </div>
                     </div>
                 </div>

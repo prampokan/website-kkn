@@ -23,8 +23,6 @@ export default function Posts() {
     const [preview, setPreview] = useState("")
     const divRef = useRef<HTMLDivElement>(null);
 
-    console.log(user);
-
     const handleClickOutside = (event: any) => {
         if (divRef.current && !divRef.current.contains(event.target)) {
           setIsOpen(false);
