@@ -180,7 +180,7 @@ export default function Navbar() {
                                 </div>
                                 {hoverProker &&
                                     <div className="mt-2 flex flex-col gap-1">
-                                        <Link href={'/proker'} className="flex items-center gap-2 hover:bg-red-100 p-2 rounded-lg">
+                                        <Link href={'/proker/mono'} className="flex items-center gap-2 hover:bg-red-100 p-2 rounded-lg">
                                             <div className="bg-red-100 p-2 rounded-lg">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-500">
                                                     <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM2.25 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM6.31 15.117A6.745 6.745 0 0 1 12 12a6.745 6.745 0 0 1 6.709 7.498.75.75 0 0 1-.372.568A12.696 12.696 0 0 1 12 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 0 1-.372-.568 6.787 6.787 0 0 1 1.019-4.38Z" clip-rule="evenodd" />
@@ -189,7 +189,7 @@ export default function Navbar() {
                                             </div>
                                             <h1>Multi Disiplin</h1>
                                         </Link>
-                                        <Link href={'/proker'} className="flex items-center gap-2 hover:bg-red-100 p-2 rounded-lg">
+                                        <Link href={'/proker/multi'} className="flex items-center gap-2 hover:bg-red-100 p-2 rounded-lg">
                                             <div className="bg-red-100 p-2 rounded-lg">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-red-500">
                                                     <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
