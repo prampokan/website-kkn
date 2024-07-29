@@ -14,7 +14,7 @@ export default function ProkerMulti() {
     }, [])
 
     const getData = async () => {
-        const q = query(collection(db, 'prokerMulti'));
+        const q = query(collection(db, 'prokerMulti'), orderBy('createdAt', 'desc'));
         const snapshot = await getDocs(q);
         const data: any = snapshot.docs.map((doc) => ({
             id: doc.id,

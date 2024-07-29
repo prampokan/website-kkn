@@ -20,7 +20,7 @@ export default function Profile() {
                     />
                 </div>
                 <div className="md:ml-10 w-full md:w-1/2 mt-8 md:mt-0 flex flex-col gap-5">
-                    <h1 className="font-bold text-5xl tracking-tighter mb-3">Kenali Desa Turus🤝</h1>
+                    <h1 className="font-bold text-3xl sm:text-5xl tracking-tighter mb-3">Kenali Desa Turus🤝</h1>
                     <Dropdown 
                         title="✨ Profile Desa"
                         description="Desa Turus, yang berlokasi di Kecamatan Polanharjo, Kabupaten Klaten, memiliki kode pos 57474. Untuk informasi lebih lanjut, Anda dapat menghubungi nomor telepon 085702059516 atau mengirim email ke turuspolanharjo34@gmail.com. Alamat lengkapnya adalah Desa Turus, Kecamatan Polanharjo, Kabupaten Klaten."

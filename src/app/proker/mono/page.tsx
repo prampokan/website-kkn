@@ -14,7 +14,7 @@ export default function ProkerMono() {
     }, [])
 
     const getData = async () => {
-        const q = query(collection(db, 'prokerMono'));
+        const q = query(collection(db, 'prokerMono'), orderBy('createdAt', 'desc'));
         const snapshot = await getDocs(q);
         const data: any = snapshot.docs.map((doc) => ({
             id: doc.id,
