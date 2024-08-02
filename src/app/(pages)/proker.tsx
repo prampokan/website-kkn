@@ -47,7 +47,7 @@ export default function Proker() {
                         <Link href={'/proker/multi'} className="py-4 px-1 border-b-2 border-black">
                             <h1 className="font-semibold">Multi Disiplin</h1>
                         </Link>
-                        <Link href={'/proker/mono'} className="py-4 px-1 hover:border-b-2 border-zinc-300">
+                        <Link href={'/proker/mono'} className="py-4 px-1 hover:border-b-2 border-zinc-400">
                             <h1 className="font-semibold">Mono Disiplin</h1>
                         </Link>
                     </div>

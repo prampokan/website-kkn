@@ -113,7 +113,7 @@ export default function DetailMulti({ params }: { params: { id: string } }) {
                                 <div className="rounded-full h-5 w-5 bg-zinc-300"></div>
                             </div>
                             <Image
-                                src={item?.image}
+                                src={item?.image || "/images/hero.webp"}
                                 width={700}
                                 height={700}
                                 alt="Picture of the author"

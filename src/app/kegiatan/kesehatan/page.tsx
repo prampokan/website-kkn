@@ -43,21 +43,21 @@ export default function Kesehatan() {
     return (
         <>
             <Navbar />
-            <div className="flex justify-center py-24">
+            <div className="flex justify-center py-24 px-5 xl:px-0">
                 <div className="w-[70rem]">
                     <h1 className="text-4xl font-bold tracking-tighter">Kegiatan Kesehatan Turus</h1>
-                    <div className="flex mt-6 gap-4">
-                        <Link href={'/kegiatan/keagamaan'} className="hover:border-b-2 py-3 w-24 flex justify-center border-zinc-400">
-                            <h1 className="font-semibold text-zinc-700">Keagamaan</h1>
+                    <div className="flex mt-6 gap-2 sm:gap-4">
+                        <Link href={'/kegiatan/keagamaan'} className="hover:border-b-2 py-3 w-20 sm:w-24 flex justify-center border-zinc-400">
+                            <h1 className="font-semibold text-zinc-700 text-sm sm:text-base">Keagamaan</h1>
                         </Link>
-                        <Link href={'/kegiatan/kesehatan'} className="py-3  w-24 flex justify-center border-b-2 border-black">
-                            <h1 className="font-semibold text-zinc-700">Kesehatan</h1>
+                        <Link href={'/kegiatan/kesehatan'} className="py-3 w-20 sm:w-24 flex justify-center border-b-2 border-black">
+                            <h1 className="font-semibold text-zinc-700 text-sm sm:text-base">Kesehatan</h1>
                         </Link>
-                        <Link href={'/kegiatan/kebudayaan'} className="py-3 w-24 flex justify-center hover:border-b-2 border-zinc-400 ">
-                            <h1 className="font-semibold text-zinc-700">Kebudayaan</h1>
+                        <Link href={'/kegiatan/kebudayaan'} className="py-3 w-20 sm:w-24 flex justify-center hover:border-b-2 border-zinc-400 ">
+                            <h1 className="font-semibold text-zinc-700 text-sm sm:text-base">Kebudayaan</h1>
                         </Link>
-                        <Link href={'/kegiatan/umkm'} className="py-3 w-24 flex justify-center hover:border-b-2 border-zinc-400">
-                            <h1 className="font-semibold text-zinc-700">UMKM</h1>
+                        <Link href={'/kegiatan/umkm'} className="py-3 w-20 sm:w-24 flex justify-center hover:border-b-2 border-zinc-400">
+                            <h1 className="font-semibold text-zinc-700 text-sm sm:text-base">UMKM</h1>
                         </Link>
                     </div>
                     <div className="flex flex-wrap gap-2 lg:gap-5 mt-8">

@@ -5,9 +5,10 @@ export default function Hero() {
         <div className="flex justify-center items-center py-32 px-5 xl:px-0">
             <div className="w-[70rem] flex flex-col md:flex-row gap-8 md:gap-0 items-center">
                 <div className="w-full md:w-2/3">
-                    <h1 className="text-6xl text-zinc-700 lg:text-8xl font-bold tracking-tighter mb-10">
+                    <h1 className="text-6xl text-zinc-700 lg:text-8xl font-bold tracking-tighter mb-10 relative z-10">
                         Selamat datang di Desa Turus!
                     </h1>
+                    <span className="hidden lg:flex h-20 w-60 bg-gradient-to-r from-red-500 to-red-100 absolute translate-x-80 translate-y-64 -rotate-2 opacity-30 z-0 top-0"></span>
                     <span className="text-2xl leading-relaxed text-zinc-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odio voluptatum mollitia iure temporibus unde blanditiis culpa magni quasi amet expedita.</span>
                     <div className="flex gap-5 mt-10">
                         <div className="bg-zinc-50 border h-24 w-24 sm:h-36 sm:w-36 rounded-xl p-2 flex flex-col justify-center items-center text-center">
