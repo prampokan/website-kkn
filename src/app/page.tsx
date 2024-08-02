@@ -6,6 +6,7 @@ import Maps from "./(pages)/maps";
 import Profile from "./(pages)/profile";
 import Kkn from "./(pages)/kkn";
 import Proker from "./(pages)/proker";
+import Kegiatan from "./(pages)/kegiatan";
 
 export default function Home() {
   return (
@@ -14,7 +15,9 @@ export default function Home() {
       <Hero />
       <Profile />
       <Maps />
+      <Kegiatan />
       <Kkn />
+      <Proker />
       <Posts />
       <Footer />
     </main>

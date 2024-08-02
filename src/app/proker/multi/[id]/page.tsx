@@ -5,6 +5,7 @@ import { db } from "@/lib/firebase/init"
 import { doc, getDoc } from "firebase/firestore"
 import { useEffect, useState } from 'react'
 import Image from "next/image"
+import Link from "next/link"
 
 export default function DetailMulti({ params }: { params: { id: string } }) {
     const { id } = params
@@ -29,10 +30,16 @@ export default function DetailMulti({ params }: { params: { id: string } }) {
     return (
         <>
             <Navbar />
-            <div className="w-full flex justify-center py-32 px-5 xl:px-0">
+            <div className="w-full flex justify-center py-24 px-5 xl:px-0">
                 <div className="w-[70rem] flex flex-col-reverse sm:flex-row">
                     <div className="sm:w-1/2">
-                        <h1 className="text-5xl font-bold tracking-tighter text-zinc-700">{item?.judul}</h1>
+                    <Link href={"/proker/multi"} className="text-red-400 font-semibold flex items-center py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4 mr-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                        kembali
+                    </Link>
+                        <h1 className="text-5xl mt-5 font-bold tracking-tighter text-zinc-700">{item?.judul}</h1>
                         <p className="text-xl font-medium my-5 font-mono">Pelaksana Program:</p>
                         <div className="flex gap-2 shadow-sm border rounded-xl w-72 p-2">
                             <div className="w-14 h-14 rounded-full overflow-hidden">

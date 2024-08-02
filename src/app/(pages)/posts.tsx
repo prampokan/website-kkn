@@ -132,10 +132,10 @@ export default function Posts() {
     }   
 
     return (
-        <div className="flex justify-center py-20 mt-20 px-5 xl:px-0">
+        <div className="flex justify-center py-20 px-5 xl:px-0">
             <div className="w-[70rem]">
                 <div>
-                    <h1 className="font-bold text-2xl sm:text-5xl tracking-tight">Unggah Keseruanmu di Turus!</h1>
+                    <h1 className="font-bold text-2xl sm:text-5xl tracking-tighter text-zinc-700">🏞️Unggah Keseruanmu di Turus!</h1>
                 </div>
                 <div className="mt-10">
                     {user ? 

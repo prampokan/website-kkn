@@ -49,7 +49,7 @@ export default function Navbar() {
                             </svg>
                             {hoverKegiatan ?
                                 <div className="shadow-lg border bg-white h-[17rem] w-64 absolute top-7 right-0 rounded-lg p-3">
-                                    <Link href={'/proker'} className="flex items-center gap-4 hover:bg-red-100 h-14 rounded-lg">
+                                    <Link href={'/kegiatan/keagamaan'} className="flex items-center gap-4 hover:bg-red-100 h-14 rounded-lg">
                                         <div className="bg-red-100 p-2 rounded-lg ml-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5 text-red-500">
                                                 <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" />
@@ -57,7 +57,7 @@ export default function Navbar() {
                                         </div>
                                         <h1 className="text-[16px] font-semibold text-zinc-600">Keagamaan</h1>
                                     </Link>
-                                    <Link href={'/proker'} className="flex items-center gap-4 hover:bg-red-100 h-14 rounded-lg mt-2">
+                                    <Link href={'/kegiatan/kesehatan'} className="flex items-center gap-4 hover:bg-red-100 h-14 rounded-lg mt-2">
                                         <div className="bg-red-100 p-2 rounded-lg ml-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5 text-red-500">
                                                 <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
@@ -65,7 +65,7 @@ export default function Navbar() {
                                         </div>
                                         <h1 className="text-[16px] font-semibold text-zinc-600">Kesehatan</h1>
                                     </Link>
-                                    <Link href={'/proker'} className="flex items-center gap-4 hover:bg-red-100 h-14 rounded-lg mt-2">
+                                    <Link href={'/kegiatan/kebudayaan'} className="flex items-center gap-4 hover:bg-red-100 h-14 rounded-lg mt-2">
                                         <div className="bg-red-100 p-2 rounded-lg ml-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5 text-red-500">
                                                 <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z" />
@@ -73,7 +73,7 @@ export default function Navbar() {
                                         </div>
                                         <h1 className="text-[16px] font-semibold text-zinc-600">Kebudayaan</h1>
                                     </Link>
-                                    <Link href={'/proker'} className="flex items-center gap-4 hover:bg-red-100 h-14 rounded-lg mt-2">
+                                    <Link href={'/kegiatan/umkm'} className="flex items-center gap-4 hover:bg-red-100 h-14 rounded-lg mt-2">
                                         <div className="bg-red-100 p-2 rounded-lg ml-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5 text-red-500">
                                                 <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
@@ -123,7 +123,7 @@ export default function Navbar() {
                     <div className="relative lg:hidden" ref={divRef}>
                         <Bar onclick={() => setOpenNav(!openNav)}/>
                         <div className={`${openNav ? "visible translate-y-8" : "invisible"} h-auto w-64 rounded-xl transition-all absolute right-0 shadow-xl bg-white/90 backdrop-blur p-4 flex flex-col gap-2`}>
-                            <Link href={''}>
+                            <Link href={'/'}>
                                 <h1 className="font-semibold text-lg hover:bg-zinc-100 p-2 rounded-lg">Beranda</h1>
                             </Link>
                             <div onMouseEnter={() => setHoverKegiatan(true)} onMouseLeave={() => setHoverKegiatan(false)} className={`${hoverKegiatan ? "h-auto" : ""} group transition-all cursor-pointer gap-2 hover:bg-zinc-100 p-2 rounded-lg`}>
@@ -135,7 +135,7 @@ export default function Navbar() {
                                 </div>
                                 {hoverKegiatan &&
                                     <div className="mt-2 flex flex-col gap-1">
-                                        <Link href={'/proker'} className="flex items-center gap-2 hover:bg-red-100 p-2 rounded-lg">
+                                        <Link href={'/kegiatan/keagamaan'} className="flex items-center gap-2 hover:bg-red-100 p-2 rounded-lg">
                                             <div className="bg-red-100 p-2 rounded-lg">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5 text-red-500">
                                                     <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" />
@@ -143,7 +143,7 @@ export default function Navbar() {
                                             </div>
                                             <h1>Keagamaan</h1>
                                         </Link>
-                                        <Link href={'/proker'} className="flex items-center gap-2 hover:bg-red-100 p-2 rounded-lg">
+                                        <Link href={'/kegiatan/kesehatan'} className="flex items-center gap-2 hover:bg-red-100 p-2 rounded-lg">
                                             <div className="bg-red-100 p-2 rounded-lg">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5 text-red-500">
                                                     <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
@@ -151,7 +151,7 @@ export default function Navbar() {
                                             </div>
                                             <h1>Kesehatan</h1>
                                         </Link>
-                                        <Link href={'/proker'} className="flex items-center gap-2 hover:bg-red-100 p-2 rounded-lg">
+                                        <Link href={'/kegiatan/kebudayaan'} className="flex items-center gap-2 hover:bg-red-100 p-2 rounded-lg">
                                             <div className="bg-red-100 p-2 rounded-lg">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5 text-red-500">
                                                     <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z" />
@@ -159,7 +159,7 @@ export default function Navbar() {
                                             </div>
                                             <h1>Kebudayaan</h1>
                                         </Link>
-                                        <Link href={'/proker'} className="flex items-center gap-2 hover:bg-red-100 p-2 rounded-lg">
+                                        <Link href={'/kegiatan/umkm'} className="flex items-center gap-2 hover:bg-red-100 p-2 rounded-lg">
                                             <div className="bg-red-100 p-2 rounded-lg">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5 text-red-500">
                                                     <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
