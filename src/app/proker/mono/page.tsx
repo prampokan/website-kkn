@@ -46,11 +46,11 @@ export default function ProkerMono() {
             <div className="w-full flex justify-center py-24 px-5 xl:px-0">
                 <div className="w-[70rem]">
                     <h1 className="font-bold text-3xl text-zinc-700 tracking-tighter">Program Kerja Mono Disiplin</h1>
-                    <div className="flex mt-6">
-                        <Link href={'/proker/multi'} className="p-4 bg-zinc-100 border border-zinc-300 hover:bg-red-50 rounded-l-2xl">
+                    <div className="flex mt-6 gap-4">
+                        <Link href={'/proker/multi'} className="py-4 px-1 hover:border-b-2 border-zinc-300">
                             <h1 className="font-semibold">Multi Disiplin</h1>
                         </Link>
-                        <Link href={'/proker/mono'} className="p-4 bg-red-100 border border-zinc-300 rounded-r-2xl">
+                        <Link href={'/proker/mono'} className="py-4 px-1 border-b-2 border-black">
                             <h1 className="font-semibold">Mono Disiplin</h1>
                         </Link>
                     </div>

@@ -33,30 +33,38 @@ export default function Keagamaan() {
         }
     };
 
-    console.log(keagamaan);
-    
+    const skeleton = []
+    for(let i = 1 ; i <= 4 ; i ++) {
+        skeleton.push(
+            <CardSkeleton/>
+        )
+    }  
+
     return (
         <>
             <Navbar />
             <div className="flex justify-center py-24">
                 <div className="w-[70rem]">
                     <h1 className="text-4xl font-bold tracking-tighter">Kegiatan Keagamaan Turus</h1>
-                    <div className="flex mt-6">
-                        <Link href={'/kegiatan/keagamaan'} className="border border-zinc-300 py-3 bg-red-100 rounded-l-2xl w-28 flex justify-center">
+                    <div className="flex mt-6 gap-4">
+                        <Link href={'/kegiatan/keagamaan'} className="border-b-2 border-black py-3 w-24 flex justify-center">
                             <h1 className="font-semibold text-zinc-700">Keagamaan</h1>
                         </Link>
-                        <Link href={'/kegiatan/kesehatan'} className="py-3 border bg-zinc-100 border-zinc-300 hover:bg-red-50 w-28 flex justify-center">
+                        <Link href={'/kegiatan/kesehatan'} className="py-3  w-24 flex justify-center hover:border-b-2 border-zinc-400">
                             <h1 className="font-semibold text-zinc-700">Kesehatan</h1>
                         </Link>
-                        <Link href={'/kegiatan/kebudayaan'} className="py-3 border bg-zinc-100 border-zinc-300 hover:bg-red-50 w-28 flex justify-center">
+                        <Link href={'/kegiatan/kebudayaan'} className="py-3 w-24 flex justify-center hover:border-b-2 border-zinc-400">
                             <h1 className="font-semibold text-zinc-700">Kebudayaan</h1>
                         </Link>
-                        <Link href={'/kegiatan/umkm'} className="py-3 border bg-zinc-100 border-zinc-300 hover:bg-red-50 rounded-r-2xl w-28 flex justify-center">
+                        <Link href={'/kegiatan/umkm'} className="py-3 w-24 flex justify-center hover:border-b-2 border-zinc-400">
                             <h1 className="font-semibold text-zinc-700">UMKM</h1>
                         </Link>
                     </div>
                     <div className="flex flex-wrap gap-2 lg:gap-5 mt-8">
-                        {keagamaan && keagamaan.map((item: any) => (
+                        {isLoading ? 
+                            <>{skeleton}</>
+                        :
+                        (keagamaan && keagamaan.map((item: any) => (
                             <>
                                 <CardKegiatan 
                                     judul={item.judul}
@@ -64,7 +72,8 @@ export default function Keagamaan() {
                                     image={item.image}
                                 />
                             </>
-                        ))}
+                        )))
+                        }
                     </div>
                 </div>
             </div>

@@ -45,12 +45,12 @@ export default function ProkerMulti() {
             <div className="w-full flex justify-center py-24 px-5 xl:px-0">
                 <div className="w-[70rem]">
                     <h1 className="font-bold tracking-tighter text-3xl text-zinc-700">Program Kerja Multi Disiplin</h1>
-                    <div className="flex mt-6">
-                        <Link href={'/proker/multi'} className="border border-zinc-300 p-4 bg-red-100 rounded-l-2xl">
-                            <h1 className="font-semibold text-zinc-700">Multi Disiplin</h1>
+                    <div className="flex mt-6 gap-5">
+                        <Link href={'/proker/multi'} className="py-4 px-1 border-b-2 border-black">
+                            <h1 className="font-semibold">Multi Disiplin</h1>
                         </Link>
-                        <Link href={'/proker/mono'} className="p-4 border bg-zinc-100 border-zinc-300 hover:bg-red-50 rounded-r-2xl">
-                            <h1 className="font-semibold text-zinc-700">Mono Disiplin</h1>
+                        <Link href={'/proker/mono'} className="py-4 px-1 hover:border-b-2 border-zinc-300">
+                            <h1 className="font-semibold">Mono Disiplin</h1>
                         </Link>
                     </div>
                     <div className="flex flex-wrap gap-2 lg:gap-5 mt-8">
