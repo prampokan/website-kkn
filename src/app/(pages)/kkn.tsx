@@ -11,7 +11,7 @@ export default function Kkn() {
                             width={500}
                             height={500}
                             alt="Picture of the author"
-                            className="object-contain w-full h-full"
+                            className="object-contain w-full h-full drop-shadow-lg"
                         />
                     </div>
                     <div className="w-24 h-24 sm:w-28 sm:h-28 opacity-25">
@@ -20,7 +20,7 @@ export default function Kkn() {
                             width={500}
                             height={500}
                             alt="Picture of the author"
-                            className="object-contain w-full h-full"
+                            className="object-contain w-full h-full rotate-12"
                         />
                     </div>
                     <div className="w-28 h-28 sm:w-36 sm:h-36">
@@ -29,7 +29,7 @@ export default function Kkn() {
                             width={500}
                             height={500}
                             alt="Picture of the author"
-                            className="object-contain w-full h-full"
+                            className="object-contain w-full h-full drop-shadow-lg"
                         />
                     </div>
                 </div>
