@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react"
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"
 import { collection, getDocs, query, addDoc, orderBy } from "firebase/firestore"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function DashboardProkerMulti() {
     const [prokerImage, setProkerImage] = useState<File | null>(null);
@@ -101,8 +102,14 @@ export default function DashboardProkerMulti() {
     };
 
     return (
-        <div className="w-full flex justify-center py-20">
+        <div className="w-full flex justify-center py-12 px-5 xl:px-0">
             <div className="w-[70rem]">
+                <Link href={"/dashboard"} className="text-red-400 w-20 mb-5 font-semibold flex items-center py-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4 mr-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                    kembali
+                </Link>
                 <h1 className="text-4xl font-bold tracking-tighter mb-5">Upload Proker Multi</h1>
                 <form onSubmit={addMono}>
                     <label className="font-semibold">Masukkan Nama Anggota 1</label>
@@ -281,10 +288,10 @@ export default function DashboardProkerMulti() {
                         />
                         }
                     <div className="flex gap-2">
-                            <button
+                            <Link href={'/dashboard'}
                                 className="bg-zinc-300 font-bold text-black px-6 py-3 mt-5 rounded-xl">
                                 Cancel
-                            </button>
+                            </Link>
                             <button type="submit" disabled={uploading} className="bg-black font-bold text-white px-6 py-3 mt-5 rounded-xl">
                                 {uploading ? 
                                     (

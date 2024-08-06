@@ -12,15 +12,10 @@ export function middleware(req: NextRequest) {
         return NextResponse.redirect(url)
     }
 
-    if (token && url.pathname === '/dashboard/auth/login') {
-        url.pathname = '/dashboard'
-        return NextResponse.redirect(url)
-    }
-
     return NextResponse.next()
 }
 
 // Specify the paths where the middleware should run
 export const config = {
-    matcher: ['/dashboard'],
+    atcher: ['/dashboard/:path*'],
 }

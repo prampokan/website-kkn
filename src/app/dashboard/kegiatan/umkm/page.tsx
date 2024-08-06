@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react"
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"
 import { collection, getDocs, query, addDoc, orderBy } from "firebase/firestore"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function DashboardUmkm() {
     const [image, setImage] = useState<File | null>(null);
@@ -47,17 +48,20 @@ export default function DashboardUmkm() {
     };
 
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-center py-20 px-5 xl:px-0">
             <div className="w-[70rem]">
+                <h1 className="font-bold text-4xl tracking-tighter mb-5">Upload UMKM</h1>
                 <form onSubmit={addUmkm}>
+                    <label className="font-semibold text-zinc-700">Masukkan Nama UMKM</label>
                     <input
                         type="text"
                         value={judul} 
                         onChange={(e) => setJudul(e.target.value)} 
-                        placeholder="Judul"
+                        placeholder="Nama"
                         className="outline-none border-2 rounded-xl h-12 px-5 w-full mt-2 mb-5"
                         required
                     />
+                    <label className="font-semibold text-zinc-700">Masukkan Deskripsi UMKM</label>
                     <input
                         type="text"
                         value={deskripsi} 
@@ -66,6 +70,7 @@ export default function DashboardUmkm() {
                         className="outline-none border-2 rounded-xl h-12 px-5 w-full mt-2 mb-5"
                         required
                     />
+                    <label className="font-semibold text-zinc-700">Masukkan Gambar UMKM</label>
                     <input type="file" onChange={handleFileImage} accept="image/*" required
                         className="cursor-pointer file:cursor-pointer block w-full text-sm text-zinc-500
                             file:mr-4 file:py-2 file:px-10
@@ -83,7 +88,7 @@ export default function DashboardUmkm() {
                             />
                         }
                          <div className="flex gap-2">
-                            <button className="bg-zinc-300 font-bold text-black px-6 py-3 mt-5 rounded-xl">Cancel</button>
+                            <Link href={'/dashboard'} className="bg-zinc-300 font-bold text-black px-6 py-3 mt-5 rounded-xl">Cancel</Link>
                             <button type="submit" disabled={uploading} className="bg-black font-bold text-white px-6 py-3 mt-5 rounded-xl">
                                 {uploading ? 
                                     (
