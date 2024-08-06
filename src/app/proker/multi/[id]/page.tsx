@@ -41,7 +41,7 @@ export default function DetailMulti({ params }: { params: { id: string } }) {
                     </Link>
                         <h1 className="text-5xl mt-5 font-bold tracking-tighter text-zinc-700">{item?.judul}</h1>
                         <p className="text-xl font-medium my-5 font-mono">Pelaksana Program:</p>
-                        <div className="flex gap-2 shadow-sm border rounded-xl w-72 p-2">
+                        <div className="flex gap-2 shadow-sm border rounded-xl w-[23rem] p-2">
                             <div className="w-14 h-14 rounded-full overflow-hidden">
                                 <Image
                                     src={item?.profileImage1}
@@ -56,14 +56,14 @@ export default function DetailMulti({ params }: { params: { id: string } }) {
                                 <span className="text-zinc-600">{item?.jurusan1}</span>
                             </div>
                         </div>
-                        <div className="flex gap-2 shadow-sm border rounded-xl w-72 p-2 mt-3">
+                        <div className="flex gap-2 shadow-sm border rounded-xl w-[23rem] p-2 mt-3">
                             <div className="w-14 h-14 rounded-full overflow-hidden">
                                 <Image
                                     src={item?.profileImage2}
                                     width={100}
                                     height={100}
-                                    alt="Picture of the author"
                                     className="w-full h-full object-cover"
+                                    alt="Picture of the author"
                                 />
                             </div>
                             <div>
@@ -71,7 +71,7 @@ export default function DetailMulti({ params }: { params: { id: string } }) {
                                 <span className="text-zinc-600">{item?.jurusan2}</span>
                             </div>
                         </div>
-                        <div className="flex gap-2 shadow-sm border rounded-xl w-72 p-2 mt-3">
+                        <div className="flex gap-2 shadow-sm border rounded-xl w-[23rem] p-2 mt-3">
                             <div className="w-14 h-14 rounded-full overflow-hidden">
                                 <Image
                                     src={item?.profileImage3}
@@ -86,7 +86,7 @@ export default function DetailMulti({ params }: { params: { id: string } }) {
                                 <span className="text-zinc-600">{item?.jurusan3}</span>
                             </div>
                         </div>
-                        <div className="flex gap-2 shadow-sm border rounded-xl w-72 p-2 mt-3">
+                        <div className="flex gap-2 shadow-sm border rounded-xl w-[23rem] p-2 mt-3">
                             <div className="w-14 h-14 rounded-full overflow-hidden">
                                 <Image
                                     src={item?.profileImage4}
@@ -102,7 +102,7 @@ export default function DetailMulti({ params }: { params: { id: string } }) {
                             </div>
                         </div>
                         <div className="mt-20">
-                            <p className="leading-loose text-xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit aliquam voluptas quisquam odio voluptates earum tempore porro, repellat molestiae et laboriosam fuga error ducimus debitis, perferendis doloribus corporis. Adipisci, natus.</p>
+                            <p className="leading-loose text-xl">{item?.deskripsi}</p>
                         </div>
                     </div>
                     <div className="sm:w-1/2">

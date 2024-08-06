@@ -14,9 +14,9 @@ export default function CardMulti(props: any) {
                     className="w-full h-full object-cover hover:scale-110 transition-all duration-300"
                 />
             </div>
-            <div className="mt-5">
+            <div className="mt-5 overflow-hidden">
                 <h1 className="font-bold text-2xl tracking-tighter text-zinc-800">{judul}</h1>
-                <p className="mt-2 text-xl text-zinc-600">
+                <p className="mt-2 text-xl h-[10rem] text-zinc-600">
                     {deskripsi}
                 </p>
             </div>

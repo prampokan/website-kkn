@@ -1,10 +1,22 @@
+'use client'
+
 import Link from "next/link"
+import { useRouter } from 'next/navigation'
 
 export default function Dashboard() {
+    const router = useRouter()
+
+    const handleLogout = () => {
+        document.cookie = "token=1br178ben1wu9cn019nw109nc01; path=/; max-age=0;"
+        router.push('/dashboard/auth/login')
+    }
     return (
         <div className="flex justify-center py-20 px-5 xl:px-0">
             <div className="w-[70rem]">
                 <h1 className="text-7xl font-bold tracking-tighter">dashboard admin turus</h1>
+                <button className="bg-black text-white font-bold px-4 py-2 rounded-xl mt-4"
+                    onClick={handleLogout}
+                >Logout</button>
                 <div className="mt-10">
                     <h1 className="text-3xl font-bold tracking-tighter">Kegiatan Desa Turus</h1>
                     <div className="flex flex-col sm:flex-row gap-5 mt-8">
