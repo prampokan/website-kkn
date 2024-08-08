@@ -10,7 +10,7 @@ export default function Login() {
 
     const handleLogin = (e: any) => {
         e.preventDefault()
-        if(username === "desaturus" && password === "desaturus123") {
+        if(username === process.env.NEXT_PUBLIC_USERNAME && password === process.env.NEXT_PUBLIC_PASSWORD) {
             document.cookie = "token=1br178ben1wu9cn019nw109nc01; path=/"
             router.push('/dashboard')
         } else {

@@ -42,7 +42,7 @@ export default function Proker() {
     return (
         <div className="w-full flex justify-center items-center py-20 px-5 xl:px-0">
             <div className="w-[70rem]">
-            <h1 className="font-bold tracking-tighter text-5xl text-zinc-700">Program Kerja KKN</h1>
+            <h1 className="font-bold tracking-tighter text-3xl sm:text-5xl text-zinc-700">Program Kerja KKN</h1>
                     <div className="flex mt-6 gap-5">
                         <Link href={'/proker/multi'} className="py-4 px-1 border-b-2 border-black">
                             <h1 className="font-semibold">Multi Disiplin</h1>

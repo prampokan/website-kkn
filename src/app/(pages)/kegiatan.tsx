@@ -42,7 +42,7 @@ export default function Kegiatan() {
     return(
         <div className="flex justify-center py-24 px-5 xl:px-0">
         <div className="w-[70rem]">
-            <h1 className="text-5xl font-bold tracking-tighter text-zinc-700">Kegiatan Desa Turus</h1>
+            <h1 className="text-3xl sm:text-5xl font-bold tracking-tighter text-zinc-700">Kegiatan Desa Turus</h1>
             <div className="flex mt-6 gap-2 sm:gap-4">
                 <Link href={'/kegiatan/keagamaan'} className="border-b-2 border-black py-3 w-20 sm:w-24 flex justify-center">
                     <h1 className="font-semibold text-zinc-700 text-sm sm:text-base">Keagamaan</h1>

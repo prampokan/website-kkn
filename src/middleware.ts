@@ -1,21 +1,23 @@
-// middleware.ts
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-// This function runs on every request
 export function middleware(req: NextRequest) {
     const url = req.nextUrl.clone()
     const token = req.cookies.get('token')
 
-    if (!token && url.pathname === '/dashboard') {
+    if (!token && url.pathname.startsWith('/dashboard') && !url.pathname.startsWith('/dashboard/auth/login')) {
         url.pathname = '/dashboard/auth/login'
+        return NextResponse.redirect(url)
+    }
+
+    if(token && url.pathname === '/dashboard/auth/login') {
+        url.pathname = '/dashboard'
         return NextResponse.redirect(url)
     }
 
     return NextResponse.next()
 }
 
-// Specify the paths where the middleware should run
 export const config = {
-    atcher: ['/dashboard/:path*'],
+    matcher: ['/dashboard/:path*'],
 }
