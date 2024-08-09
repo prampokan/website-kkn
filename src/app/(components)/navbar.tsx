@@ -27,7 +27,7 @@ export default function Navbar() {
     return (
         <div className="w-full h-16 shadow bg-white/90 backdrop-blur fixed flex justify-center items-center px-5 xl:px-0 z-50">
             <div className="w-[70rem] flex justify-between items-center">
-                <div className="w-24 flex items-center gap-2">
+                <Link href={'/'} className="w-24 flex items-center gap-2 cursor-pointer">
                     <Image
                         src="/images/logo-klaten.png"
                         width={100}
@@ -35,12 +35,12 @@ export default function Navbar() {
                         alt="Picture of the author"
                         className="object-cover w-7 h-auto -rotate-6"
                     />
-                    <h1 className="font-black text-zinc-700 text-xl leading-4">Desa Turus</h1>
-                </div>
+                    <h1 className="font-black text-zinc-700 text-xl tracking-tighter leading-4">Desa Turus</h1>
+                </Link>
                 <div className="flex items-center">
                     <ul className="gap-10 text-zinc-600 text-lg font-medium hidden lg:flex">
                         <Link href={'/'}>
-                            <li>Beranda</li>
+                            <li>Beranda</li> 
                         </Link>
                         <div className="group flex items-center gap-2 relative cursor-pointer" onMouseEnter={() => setHoverKegiatan(true)} onMouseLeave={() => setHoverKegiatan(false)}>
                             <li>Kegiatan Turus</li>

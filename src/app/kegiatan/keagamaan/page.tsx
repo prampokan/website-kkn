@@ -47,16 +47,16 @@ export default function Keagamaan() {
                 <div className="w-[70rem]">
                     <h1 className="text-4xl font-bold tracking-tighter">Kegiatan Keagamaan Turus</h1>
                     <div className="flex mt-6 gap-2 sm:gap-4">
-                        <Link href={'/kegiatan/keagamaan'} className="border-b-2 border-black py-3 w-20 sm:w-24 flex justify-center">
+                        <Link href={'/kegiatan/keagamaan'} className="border-b-2 border-black py-3 px-1 flex justify-center">
                             <h1 className="font-semibold text-zinc-700 text-sm sm:text-base">Keagamaan</h1>
                         </Link>
-                        <Link href={'/kegiatan/kesehatan'} className="py-3 w-20 sm:w-24 flex justify-center hover:border-b-2 border-zinc-400">
+                        <Link href={'/kegiatan/kesehatan'} className="py-3 px-1 flex justify-center hover:border-b-2 border-zinc-400">
                             <h1 className="font-semibold text-zinc-700 text-sm sm:text-base">Kesehatan</h1>
                         </Link>
-                        <Link href={'/kegiatan/kebudayaan'} className="py-3 w-20 sm:w-24 flex justify-center hover:border-b-2 border-zinc-400">
+                        <Link href={'/kegiatan/kebudayaan'} className="py-3 px-1 flex justify-center hover:border-b-2 border-zinc-400">
                             <h1 className="font-semibold text-zinc-700 text-sm sm:text-base">Kebudayaan</h1>
                         </Link>
-                        <Link href={'/kegiatan/umkm'} className="py-3 w-20 sm:w-24 flex justify-center hover:border-b-2 border-zinc-400">
+                        <Link href={'/kegiatan/umkm'} className="py-3 px-1 flex justify-center hover:border-b-2 border-zinc-400">
                             <h1 className="font-semibold text-zinc-700 text-sm sm:text-base">UMKM</h1>
                         </Link>
                     </div>
