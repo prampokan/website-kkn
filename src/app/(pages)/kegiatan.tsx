@@ -42,7 +42,8 @@ export default function Kegiatan() {
     return(
         <div className="flex justify-center py-24 px-5 xl:px-0">
         <div className="w-[70rem]">
-            <h1 className="text-3xl sm:text-5xl font-bold tracking-tighter text-zinc-700">Kegiatan Desa Turus</h1>
+            <h1 className="text-3xl sm:text-5xl font-bold tracking-tighter text-zinc-700 z-10 relative">Kegiatan Desa Turus</h1>
+            <span className="w-[15rem] h-[2rem] bg-gradient-to-r from-red-500 to-red-100 absolute -rotate-2 -translate-y-7 z-0 opacity-30"></span>
             <div className="flex mt-6 gap-3 sm:gap-4">
                 <Link href={'/kegiatan/keagamaan'} className="border-b-2 border-black py-3 px-1 flex justify-center">
                     <h1 className="font-semibold text-zinc-700 text-sm sm:text-base">Keagamaan</h1>
@@ -59,18 +60,26 @@ export default function Kegiatan() {
             </div>
             <div className="flex flex-wrap gap-2 lg:gap-5 mt-8">
                 {isLoading ? 
-                        <>{skeleton}</>
-                        :
-                        (keagamaan && keagamaan.map((item: any) => (
-                            <>
-                                <CardKegiatan 
-                                    judul={item.judul}
-                                    deskripsi={item.deskripsi}
-                                    image={item.image}
-                                />
-                            </>
-                        )))
-                        }
+                    <>{skeleton}</>
+                    :
+                    (keagamaan && keagamaan.map((item: any) => (
+                        <>
+                            <CardKegiatan 
+                                judul={item.judul}
+                                deskripsi={item.deskripsi}
+                                image={item.image}
+                            />
+                        </>
+                    )))
+                }
+            </div>
+            <div className="mt-8 w-full flex justify-center">
+                <Link href={'/kegiatan/keagamaan'} className="p-4 text-zinc-700 group flex w-[10rem] items-center gap-1 justify-center shadow border font-semibold rounded-full">
+                    Lihat Semua
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4 group-hover:translate-x-1 transition-all">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                </Link>
             </div>
         </div>
     </div>

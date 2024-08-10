@@ -42,7 +42,8 @@ export default function Proker() {
     return (
         <div className="w-full flex justify-center items-center py-20 px-5 xl:px-0">
             <div className="w-[70rem]">
-            <h1 className="font-bold tracking-tighter text-3xl sm:text-5xl text-zinc-700">Program Kerja KKN</h1>
+            <h1 className="font-bold tracking-tighter text-3xl sm:text-5xl text-zinc-700 relative z-10">Program Kerja KKN</h1>
+            <span className="w-[15rem] h-[2rem] bg-gradient-to-r from-sky-500 to-sky-100 absolute -rotate-2 -translate-y-7 z-0 opacity-30"></span>
                     <div className="flex mt-6 gap-5">
                         <Link href={'/proker/multi'} className="py-4 px-1 border-b-2 border-black">
                             <h1 className="font-semibold">Multi Disiplin</h1>
@@ -70,6 +71,14 @@ export default function Proker() {
                             </>
                         )))
                         }
+                    </div>
+                    <div className="mt-8 w-full flex justify-center">
+                        <Link href={'/proker/multi'} className="p-4 text-zinc-700 group flex w-[10rem] items-center gap-1 justify-center shadow border font-semibold rounded-full">
+                            Lihat Semua
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4 group-hover:translate-x-1 transition-all">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                        </Link>
                     </div>
             </div>
         </div>
