@@ -3,10 +3,12 @@
 import { db } from "@/lib/firebase/init"
 import { storage } from "@/lib/firebase/init"
 import { useState, useEffect, useRef } from "react"
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage"
-import { collection, getDocs, query, addDoc, orderBy } from "firebase/firestore"
+import { ref, uploadBytes, getDownloadURL, deleteObject } from "firebase/storage"
+import { collection, getDocs, query, addDoc, orderBy, deleteDoc, doc } from "firebase/firestore"
 import Image from "next/image"
 import Link from "next/link"
+import CardSkeleton from "@/app/(components)/cardSkeleton"
+import CardDashboard from "@/app/(components)/cardDashboard"
 
 export default function DashboardKesehatan() {
     const [image, setImage] = useState<File | null>(null);
@@ -46,6 +48,49 @@ export default function DashboardKesehatan() {
             setUploading(false);
         }
     };
+
+    const [kesehatan, setKesehatan] = useState([])
+    const [isLoading, setIsLoading] = useState(false)
+
+    useEffect(() => {
+        getData()
+    }, [])
+
+    const getData = async () => {
+        setIsLoading(true)
+        try {
+            const q = query(collection(db, 'kegiatanKesehatan'));
+            const snapshot = await getDocs(q);
+            const data: any = snapshot.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data(),
+            }));
+            setKesehatan(data);
+        } catch (error) {
+            console.error("Error getting documents: ", error);
+        } finally {
+            setIsLoading(false)
+        }
+    };
+
+    const deleteKesehatan = async (id: string, imageUrl: string) => {
+        try {
+          await deleteDoc(doc(db, 'kegiatanKesehatan', id));
+          const storageRef = ref(storage, imageUrl);
+          await deleteObject(storageRef);
+          alert("Berhasil Dihapus");
+          window.location.reload();
+        } catch (error) {
+          console.error("Error deleting document: ", error);
+        }
+      };
+
+    const skeleton = []
+    for(let i = 1 ; i <= 4 ; i ++) {
+        skeleton.push(
+            <CardSkeleton/>
+        )
+    } 
 
     return (
         <div className="flex justify-center py-20 px-5 xl:px-0">
@@ -101,6 +146,22 @@ export default function DashboardKesehatan() {
                             </button>
                         </div>
                 </form>
+                <div className="flex flex-wrap gap-2 lg:gap-5 mt-8">
+                        {isLoading ? 
+                            <>{skeleton}</>
+                        :
+                        (kesehatan && kesehatan.map((item: any) => (
+                            <>
+                                <CardDashboard 
+                                    judul={item.judul}
+                                    deskripsi={item.deskripsi}
+                                    image={item.image}
+                                    onDelete={() => deleteKesehatan(item.id, item.image)}
+                                />
+                            </>
+                        )))
+                    }
+                </div>
             </div>
         </div>
     )

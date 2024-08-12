@@ -9,7 +9,7 @@ export default function Hero() {
                         Selamat datang di Desa Turus!
                     </h1>
                     <span className="hidden lg:flex h-20 w-60 bg-gradient-to-r from-red-500 to-red-100 absolute translate-x-80 translate-y-64 -rotate-2 opacity-30 z-0 top-0"></span>
-                    <span className="text-2xl leading-relaxed text-zinc-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odio voluptatum mollitia iure temporibus unde blanditiis culpa magni quasi amet expedita.</span>
+                    <span className="text-2xl leading-relaxed text-zinc-600">Desa Turus adalah desa di kecamatan Polanharjo, Klaten, Jawa Tengah, Indonesia yang terdiri dari 4 RW dan 13 RT.</span>
                     <div className="flex gap-5 mt-10">
                         <div className="bg-zinc-50 border h-24 w-24 sm:h-36 sm:w-36 rounded-xl p-2 flex flex-col justify-center items-center text-center">
                             <div className="w-7 sm:w-10">
