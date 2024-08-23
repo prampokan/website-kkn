@@ -1,8 +1,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://desaturus.com</loc>
+    <loc>https://www.desaturus.com/</loc>
     <lastmod>2023-04-06T15:02:24.021Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.desaturus.com/proker/multi</loc>
+    <lastmod>2023-04-06T15:02:24.021Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.desaturus.com/proker/mono</loc>
+    <lastmod>2023-04-06T15:02:24.021Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.desaturus.com/kegiatan/keagamaan</loc>
+    <lastmod>2023-04-06T15:02:24.021Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
