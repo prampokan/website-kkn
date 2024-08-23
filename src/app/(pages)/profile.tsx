@@ -12,7 +12,7 @@ export default function Profile() {
                         <div className="rounded-full h-5 w-5 bg-zinc-300"></div>
                     </div>
                     <Image
-                        src="/images/hero2.jpg"
+                        src="/images/kantordesa.jpg"
                         width={700}
                         height={700}
                         alt="Picture of the author"

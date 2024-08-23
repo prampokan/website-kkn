@@ -46,14 +46,14 @@ export default function Hero() {
                          className="h-40 object-cover rounded-t-3xl"
                         />
                         <Image 
-                         src="/images/hero2.jpg"
+                         src="/images/hero4.jpg"
                          width={390}
                          height={390}
                          alt="Picture of the author"
                          className="h-52 object-cover"
                         />
                         <Image 
-                         src="/images/hero2.jpg"
+                         src="/images/hero3.jpg"
                          width={390}
                          height={390}
                          alt="Picture of the author"

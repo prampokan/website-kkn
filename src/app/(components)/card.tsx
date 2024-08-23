@@ -3,7 +3,10 @@ import Image from "next/image"
 export default function Card(props: any) {
     const {nama, jurusan, judul, deskripsi, image, profileImage} = props
     return (
-        <div className="w-full sm:w-[49%] h-auto shadow border rounded-3xl p-5">
+        <div className="w-full sm:w-[49%] h-auto shadow border rounded-3xl p-5 flex flex-col justify-between">
+            <div>
+
+           
             <div className="bg-zinc-200 w-full h-[22rem] rounded-2xl overflow-hidden">
                 <Image 
                     src={image || "/images/hero.webp"}
@@ -18,6 +21,7 @@ export default function Card(props: any) {
                     <p className="text-xl text-zinc-600">
                         {deskripsi}
                     </p>
+                </div>
                 </div>
             <div className="mt-5">
                 <div className="flex items-center gap-3">
