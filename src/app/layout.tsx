@@ -9,9 +9,9 @@ const figtree = Figtree({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Desa Turus",
   description: "Website Desa Turus",
-  authors: [{ name: "Desa Turus", url: "https://desaturus.vercel.app" }],
+  authors: [{ name: "Desa Turus", url: "https://www.desaturus.com/" }],
   icons: {
-    icon: '/icon.png',
+    icon: '/images/logo-klaten.png',
   },
 };
 

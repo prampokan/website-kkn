@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function Footer() {
     return (
-        <div className="bg-zinc-900 flex justify-center w-full pt-20 pb-10 px-5 xl:px-0">
+        <div className="bg-zinc-900 flex justify-center w-full pt-20 pb-10 px-5 xl:px-0" id='tentangkami'>
             <div className="w-[70rem]">
                 <Link href={'/'} className="w-24 flex items-center gap-2 cursor-pointer">
                     <Image

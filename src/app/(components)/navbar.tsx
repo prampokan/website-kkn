@@ -116,7 +116,7 @@ export default function Navbar() {
                                 : ""
                             }
                         </div>
-                        <Link href="#">
+                        <Link href={'/#tentangkami'}>
                             <li>Tentang Kami</li>
                         </Link>
                     </ul>

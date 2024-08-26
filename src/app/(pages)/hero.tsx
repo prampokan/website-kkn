@@ -43,21 +43,21 @@ export default function Hero() {
                          width={390}
                          height={390}
                          alt="Picture of the author"
-                         className="h-40 object-cover rounded-t-3xl"
+                         className="h-40 object-cover rounded-t-3xl bg-zinc-100"
                         />
                         <Image 
                          src="/images/hero4.jpg"
                          width={390}
                          height={390}
                          alt="Picture of the author"
-                         className="h-52 object-cover"
+                         className="h-52 object-cover bg-zinc-100"
                         />
                         <Image 
                          src="/images/hero3.jpg"
                          width={390}
                          height={390}
                          alt="Picture of the author"
-                         className="h-40 object-cover rounded-b-3xl"
+                         className="h-40 object-cover rounded-b-3xl bg-zinc-100"
                         />
                 </div>
             </div>

@@ -21,7 +21,20 @@ export default function Posts() {
     const [isOpen, setIsOpen] = useState(false)
     const [modalOpen, setModalOpen] = useState(false)
     const [preview, setPreview] = useState("")
+    const [modalPost, setModalPost] = useState(false)
+    const [selectedPost, setSelectedPost] = useState<Post | null>(null);
     const divRef = useRef<HTMLDivElement>(null);
+
+    interface Post {
+        id: string;
+        photo: string;
+        userPhoto: string;
+        description: string;
+        username: string;
+        createdAt: {
+            seconds: number;
+        };
+    }
 
     const handleClickOutside = (event: any) => {
         if (divRef.current && !divRef.current.contains(event.target)) {
@@ -115,6 +128,14 @@ export default function Posts() {
         return 'baru saja';
     };
 
+    const handlePostClick = (id: string) => {
+        const post = posts.find((post: Post) => post.id === id);
+        if (post) {
+            setSelectedPost(post);
+            setModalPost(true);
+        }
+    };
+
     const skeleton = []
     for(let i = 1 ; i <= 6 ; i ++) {
         skeleton.push(
@@ -133,7 +154,7 @@ export default function Posts() {
 
     return (
         <div className="flex justify-center py-20 px-5 xl:px-0">
-            <div className="w-[70rem]">
+            <div className="w-full xl:w-[70rem]">
                 <div>
                     <h1 className="font-bold text-2xl sm:text-5xl tracking-tighter text-zinc-700">Unggah Keseruanmu di Turus!</h1>
                 </div>
@@ -259,35 +280,82 @@ export default function Posts() {
                         <>{skeleton}</>
                     :
                     posts.map((post: any) => (
-                        <div key={post.id} className="h-[22rem] w-full sm:w-[48%] xl:w-[22rem] rounded-3xl border overflow-hidden cursor-pointer hover:shadow-xl transition-all">
-                            <div className="w-full h-[17rem]  overflow-hidden">
-                                <Image
-                                    src={post.photo}
-                                    width={500}
-                                    height={500}
-                                    alt="Picture of the author"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="h-[5rem] w-full flex items-center p-3 gap-3">
-                                <div className="rounded-full h-12 w-12 bg-slate-100 overflow-hidden">
+                        <>
+                            <div key={post.id} onClick={() => handlePostClick(post.id)} className="h-[22rem] w-full sm:w-[48%] xl:w-[22rem] rounded-3xl border overflow-hidden cursor-pointer hover:shadow-xl transition-all">
+                                <div className="h-[17rem] overflow-hidden">
                                     <Image
-                                        src={post.userPhoto}
+                                        src={post.photo}
                                         width={500}
                                         height={500}
                                         alt="Picture of the author"
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div>
-                                    <p className="font-medium font-mono">{post.description}</p>
-                                    <div className="flex gap-2 items-center">
-                                        <h3 className="font-semibold text-zinc-600 text-sm">{post.username}</h3>
-                                        <span className="text-[12px] text-zinc-400 font-medium">{formatedTimeStamp(post.createdAt.seconds)}</span>
+                                <div className="h-[5rem] w-full flex items-center p-3 gap-3">
+                                    <div className="rounded-full h-12 w-12 bg-slate-100 overflow-hidden">
+                                        <Image
+                                            src={post.userPhoto}
+                                            width={500}
+                                            height={500}
+                                            alt="Picture of the author"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <div className="w-3/4">
+                                        <p className="font-medium font-mono h-6 truncate">{post.description}</p>
+                                        <div className="flex gap-2 items-center">
+                                            <h3 className="font-semibold text-zinc-600 text-sm">{post.username}</h3>
+                                            <span className="text-[12px] text-zinc-400 font-medium">{formatedTimeStamp(post.createdAt.seconds)}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div className={`${modalPost ? "opacity-100" : "invisible"} shadow-2xl transition-all opacity-0 fixed top-0 left-0 w-full h-full flex justify-center items-center z-10 bg-black/10`}>
+                                <div className="bg-white flex md:flex-row flex-col rounded-2xl overflow-hidden">
+                                    <div className="w-64 h-auto md:w-96">
+                                        <Image
+                                            src={selectedPost?.photo || '/images/hero.webp'}
+                                            width={500}
+                                            height={500}
+                                            alt="Picture of the author"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <div className="w-64 md:w-72 p-3 flex flex-col justify-between">
+                                        <div className="relative w-full">
+                                            <div 
+                                             onClick={() => {
+                                                setModalPost(false);
+                                                setSelectedPost(null);
+                                             }}
+                                             className="w-10 h-10 flex justify-center right-0 items-center absolute hover:bg-zinc-200 rounded-full cursor-pointer transition-all">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                                </svg>
+                                            </div>
+                                            <div className="md:mt-14 pr-10">
+                                                <p className="font-medium font-mono h-6">{selectedPost?.description}</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex gap-3 mt-14 md:mt-0">
+                                            <div className="rounded-full h-12 w-12 bg-slate-100 overflow-hidden">
+                                                <Image
+                                                    src={selectedPost?.userPhoto || '/images/hero.webp'}
+                                                    width={500}
+                                                    height={500}
+                                                    alt="Picture of the author"
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </div>
+                                            <div className="flex flex-col justify-center">
+                                                <h3 className="font-semibold text-zinc-600 text-sm">{selectedPost?.username}</h3>
+                                                <span className="text-[12px] text-zinc-400 font-medium">{formatedTimeStamp(selectedPost?.createdAt.seconds)}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </>
                     ))} 
                 </div>
             </div>

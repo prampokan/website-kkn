@@ -43,7 +43,7 @@ export default function DetailMulti({ params }: { params: { id: string } }) {
                         <h1 className="text-3xl sm:text-5xl my-7 sm:my-0 font-bold tracking-tighter text-zinc-700">{item?.judul}</h1>
                         <p className="text-xl font-medium my-5 font-mono">Pelaksana Program:</p>
                         <div className="flex gap-2 shadow-sm border rounded-xl w-[23rem] p-2">
-                            <div className="w-14 h-14 rounded-full overflow-hidden">
+                            <div className="w-14 h-14 rounded-full overflow-hidden bg-zinc-100">
                                 <Image
                                     src={item?.profileImage1}
                                     width={100}
@@ -58,7 +58,7 @@ export default function DetailMulti({ params }: { params: { id: string } }) {
                             </div>
                         </div>
                         <div className="flex gap-2 shadow-sm border rounded-xl w-[23rem] p-2 mt-3">
-                            <div className="w-14 h-14 rounded-full overflow-hidden">
+                            <div className="w-14 h-14 rounded-full overflow-hidden bg-zinc-100">
                                 <Image
                                     src={item?.profileImage2}
                                     width={100}
@@ -73,7 +73,7 @@ export default function DetailMulti({ params }: { params: { id: string } }) {
                             </div>
                         </div>
                         <div className="flex gap-2 shadow-sm border rounded-xl w-[23rem] p-2 mt-3">
-                            <div className="w-14 h-14 rounded-full overflow-hidden">
+                            <div className="w-14 h-14 rounded-full overflow-hidden bg-zinc-100">
                                 <Image
                                     src={item?.profileImage3}
                                     width={100}
@@ -88,7 +88,7 @@ export default function DetailMulti({ params }: { params: { id: string } }) {
                             </div>
                         </div>
                         <div className="flex gap-2 shadow-sm border rounded-xl w-[23rem] p-2 mt-3">
-                            <div className="w-14 h-14 rounded-full overflow-hidden">
+                            <div className="w-14 h-14 rounded-full overflow-hidden bg-zinc-100">
                                 <Image
                                     src={item?.profileImage4}
                                     width={100}
