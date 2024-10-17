@@ -7,11 +7,11 @@ const inter = Inter({ subsets: ["latin"] });
 const figtree = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Desa Turus",
+  title: "Desa Turus - Jawa Tengah, Klaten, Kec. Polanharjo",
   description: "Website Desa Turus",
   authors: [{ name: "Desa Turus", url: "https://www.desaturus.com/" }],
   icons: {
-    icon: '/images/logo-klaten.png',
+    icon: 'favicon.ico',
   },
 };
 
